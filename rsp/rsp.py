@@ -15,7 +15,7 @@ hands = mp_hands.Hands(
     min_tracking_confidence=0.5)
 
 # Gesture recognition model
-file = np.genfromtxt('data/gesture_train.csv', delimiter=',')
+file = np.genfromtxt('rsp\data\gesture_train.csv', delimiter=',')
 angle = file[:, :-1].astype(np.float32)
 label = file[:, -1].astype(np.float32)
 knn = cv2.ml.KNearest_create()
